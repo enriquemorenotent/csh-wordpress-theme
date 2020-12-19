@@ -1,0 +1,65 @@
+/* Add styles for typography here */
+
+h1 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 36px;
+	font-weight: 700;
+}
+
+h2 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 28px;
+}
+
+h4 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 22px;
+}
+
+p,
+ul {
+	font-family: Lato, serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+a,
+a:active,
+a:focus {
+	color: #d30050;
+}
+
+.button {
+	font-family: Lato, sans-serif;
+	background-color: #cda34d;
+	color: #fff;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.button:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #bd933d;
+}
+
+input,
+textarea {
+	border: 0;
+	background-color: #eee;
+	padding: 10px;
+}
+
+table {
+	margin: 20px 0 40px 0;
+	font-family: Lato, serif;
+}
+
+table thead {
+	background-color: #f8f8f8;
+	color: #6d6d6d;
+}

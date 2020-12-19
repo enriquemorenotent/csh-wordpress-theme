@@ -1,0 +1,211 @@
+header {
+	padding: 30px 0;
+}
+
+header h1 {
+	padding: 10px 0;
+	width: 70%;
+	font-weight: 700;
+
+	/* text-transform: uppercase; */
+	text-align: center;
+	margin: 0 auto 40px;
+	border-top: 2px solid #aaa;
+	border-bottom: 2px solid #aaa;
+}
+
+header .menu {
+	background-color: #d30050;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+header .menu li {
+	display: inline-block;
+}
+
+header .menu a {
+	display: block;
+	padding: 16px 30px;
+	font-size: 14px;
+	font-family: Lato, sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+header .menu a:hover {
+	text-decoration: none;
+	background-color: #c30040;
+}
+
+footer {
+	background-color: #201f1d;
+	padding: 40px 0;
+	min-height: 400px;
+	color: #fff;
+}
+
+footer h4 {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+footer ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: Lato, sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+footer li {
+	margin: 10px 0;
+	color: #9d9a93;
+}
+
+footer a {
+	color: #9d9a93;
+}
+
+/* Add styles for typography here */
+h1 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 36px;
+	font-weight: 700;
+}
+
+h2 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 28px;
+}
+
+h4 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 22px;
+}
+
+p,
+ul {
+	font-family: Lato, serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+a,
+a:active,
+a:focus {
+	color: #d30050;
+}
+
+.button {
+	font-family: Lato, sans-serif;
+	background-color: #cda34d;
+	color: #fff;
+	display: inline-block;
+	padding: 10px 30px;
+	border-radius: 30px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.button:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #bd933d;
+}
+
+input,
+textarea {
+	border: 0;
+	background-color: #eee;
+	padding: 10px;
+}
+
+table {
+	margin: 20px 0 40px 0;
+	font-family: Lato, serif;
+}
+
+table thead {
+	background-color: #f8f8f8;
+	color: #6d6d6d;
+}
+
+.woocommerce {
+	margin-bottom: 30px;
+}
+
+.woocommerce a.added_to_cart {
+	display: none;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: #d30050;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #c30040;
+}
+
+.woocommerce .form-row {
+	display: block;
+}
+
+.woocommerce .woocommerce-billing-fields__field-wrapper p {
+	width: 100%;
+}
+
+#billing_first_name_field,
+#billing_last_name_field {
+	width: 48%;
+}
+
+.woocommerce-additional-fields {
+	margin-top: 20px;
+}
+
+.woocommerce .woocommerce-additional-fields .form-row textarea {
+	height: 200px;
+}
+
+.woocommerce .shop_table_responsive td:first-child {
+	width: 40px;
+}
+
+.woocommerce .shop_table_responsive td:nth-child(2) {
+	width: 100px;
+}
+
+.woocommerce ul.products li.product a img {
+	border: 1px solid #ddd;
+	padding: 40px;
+	box-shadow: 0 0 3px #ddd;
+}
+
+.woocommerce div.product div.images img {
+	border: 1px solid #ddd;
+	padding: 40px;
+	box-shadow: 0 0 3px #ddd;
+}
+
+.cta-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.cta {
+	position: relative;
+}

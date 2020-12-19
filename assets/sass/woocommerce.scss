@@ -1,0 +1,62 @@
+.woocommerce {
+	margin-bottom: 30px;
+}
+
+.woocommerce a.added_to_cart {
+	display: none;
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: #d30050;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #c30040;
+}
+
+.woocommerce .form-row {
+	display: block;
+}
+
+.woocommerce .woocommerce-billing-fields__field-wrapper p {
+	width: 100%;
+}
+
+#billing_first_name_field,
+#billing_last_name_field {
+	width: 48%;
+}
+
+.woocommerce-additional-fields {
+	margin-top: 20px;
+}
+
+.woocommerce .woocommerce-additional-fields .form-row textarea {
+	height: 200px;
+}
+
+.woocommerce .shop_table_responsive td:first-child {
+	width: 40px;
+}
+
+.woocommerce .shop_table_responsive td:nth-child(2) {
+	width: 100px;
+}
+
+.woocommerce ul.products li.product a img {
+	border: 1px solid #ddd;
+	padding: 40px;
+	box-shadow: 0 0 3px #ddd;
+}
+
+.woocommerce div.product div.images img {
+	border: 1px solid #ddd;
+	padding: 40px;
+	box-shadow: 0 0 3px #ddd;
+}
