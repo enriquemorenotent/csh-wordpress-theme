@@ -29,6 +29,8 @@
 	"scripts": {
 		"start": "chokidar \"**/*.scss\" \"src/*.js\"  -c \"npm run build\" --initial",
 		"build:style": "sass assets/sass/style.scss:style.css --style=expanded --source-map",
+		"build:blocks": "sass assets/sass/blocks.scss:blocks.css --style=expanded --source-map",
+		"build:blocks-editor": "sass assets/sass/blocks-editor.scss:blocks-editor.css --style=expanded --source-map",
 		"build:style-editor": "sass assets/sass/style-editor.scss:assets/css/style-editor.css --style=expanded --source-map",
 		"build:style-dark-mode": "sass assets/sass/style-dark-mode.scss:assets/css/style-dark-mode.css --style=expanded --source-map",
 		"build:rtl": "rtlcss style.css style-rtl.css style-dark-mode.css style-dark-mode-rtl.css",

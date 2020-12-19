@@ -40,7 +40,7 @@ add_action("init", "csh_gutenber_default_colors");
 function csh_gutenberg_blocks()
 {
     wp_register_script(
-        "csh-cta-js",
+        "csh-blocks-js",
         get_template_directory_uri() . "/build/index.js",
         array(
             'wp-editor',
@@ -50,8 +50,22 @@ function csh_gutenberg_blocks()
         ),
     );
 
+    wp_register_style(
+        "csh-blocks-css",
+        get_template_directory_uri() . "/blocks.css",
+        []
+    );
+
+    wp_register_style(
+        "csh-blocks-editor-css",
+        get_template_directory_uri() . "/blocks-editor.css",
+        []
+    );
+
     register_block_type("csh/cta", array(
-        "editor_script" => "csh-cta-js",
+        "editor_script" => "csh-blocks-js",
+        "editor_style" => "csh-blocks-editor-css",
+        "style" => "csh-blocks-css"
     ));
 }
 
