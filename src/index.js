@@ -8,7 +8,7 @@ import {
 	// 	BlockControls,
 	// 	AlignmentToolbar,
 } from "@wordpress/block-editor";
-import { RangeControl, PanelBody, IconButton } from "@wordpress/components";
+import { RangeControl, PanelBody, Button } from "@wordpress/components";
 
 // const ALLOWED_BLOCKS = ["core/button"];
 
@@ -41,14 +41,14 @@ registerBlockType("csh/cta", {
 			type: "string",
 			default: null,
 		},
-		// 		overlayColor: {
-		// 			type: "string",
-		// 			default: "rgba(0, 0, 0, .5)",
-		// 		},
-		// 		overlayOpacity: {
-		// 			type: "number",
-		// 			default: 0.3,
-		// 		},
+		overlayColor: {
+			type: "string",
+			default: "rgba(0, 0, 0, .5)",
+		},
+		overlayOpacity: {
+			type: "number",
+			default: 0.3,
+		},
 	},
 
 	// built-in functions
@@ -61,7 +61,9 @@ registerBlockType("csh/cta", {
 		const handleChangeBody = setAttrValue("body");
 		const handleChangeTitleColor = setAttrValue("titleColor");
 		const handleSelectBackgroundImage = (image) =>
-			setAttrValue("backgroundImage")(image.sizes.full.url);
+			setAttributes({ backgroundImage: image.sizes.full.url });
+		const handleSelectOverlayColor = setAttrValue("overlayColor");
+		const handleChangeOverlayOpacity = setAttrValue("overlayOpacity");
 
 		return (
 			<>
@@ -84,19 +86,47 @@ registerBlockType("csh/cta", {
 							value={attributes.backgroundImage}
 							onSelect={handleSelectBackgroundImage}
 							render={({ open }) => (
-								<IconButton
+								<Button
 									className="components-button block-editor-media-placeholder__button block-editor-media-placeholder__upload-button"
 									icon="upload"
 									onClick={open}
 								>
 									Background image
-								</IconButton>
+								</Button>
 							)}
 						/>
+						<div
+							style={{ marginTop: "20px", marginBottom: "40px" }}
+							className="overlay"
+						>
+							<p>
+								<strong>Overlay settings:</strong>
+							</p>
+							<ColorPalette
+								value={attributes.overlayColor}
+								onSelect={handleSelectOverlayColor}
+							/>
+							<RangeControl
+								label="Overlay opacity"
+								value={attributes.overlayOpacity}
+								onChange={handleChangeOverlayOpacity}
+								min={0}
+								max={1}
+								step={0.01}
+							/>
+						</div>
 					</PanelBody>
 				</InspectorControls>
 				<div className="cta-editor">
-					<div className="cta">
+					<div
+						className="cta"
+						style={{
+							backgroundImage: `url(${attributes.backgroundImage})`,
+							backgroundSize: "cover",
+							backgroundPosition: "center",
+							backgroundRepeat: "no-repeat",
+						}}
+					>
 						<RichText
 							key="editable"
 							style={{ color: attributes.titleColor }}
@@ -120,7 +150,15 @@ registerBlockType("csh/cta", {
 
 	save: ({ attributes }) => {
 		return (
-			<div className="cta">
+			<div
+				className="cta"
+				style={{
+					backgroundImage: `url(${attributes.backgroundImage})`,
+					backgroundSize: "cover",
+					backgroundPosition: "center",
+					backgroundRepeat: "no-repeat",
+				}}
+			>
 				<h2 style={{ color: attributes.titleColor }}>
 					{attributes.title}
 				</h2>
