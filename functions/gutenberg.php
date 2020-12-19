@@ -19,7 +19,13 @@ function csh_gutenber_default_colors()
                 "name" => "Red",
                 "slug" => "red",
                 "color" => "#d30050"
-            ]
+            ],
+            [
+                "name" => "Foo",
+                "slug" => "foo",
+                "color" => "#262582"
+            ],
+
         ]
     );
 

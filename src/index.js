@@ -4,13 +4,13 @@ import {
 	InspectorControls,
 	ColorPalette,
 	MediaUpload,
-	// 	InnerBlocks,
+	InnerBlocks,
 	// 	BlockControls,
 	// 	AlignmentToolbar,
 } from "@wordpress/block-editor";
 import { RangeControl, PanelBody, Button } from "@wordpress/components";
 
-// const ALLOWED_BLOCKS = ["core/button"];
+const ALLOWED_BLOCKS = ["core/button"];
 
 registerBlockType("csh/cta", {
 	// built-in attributes
@@ -149,6 +149,7 @@ registerBlockType("csh/cta", {
 							value={attributes.body}
 							onChange={handleChangeBody}
 						/>
+						<InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
 					</div>
 				</div>
 			</>
@@ -177,6 +178,7 @@ registerBlockType("csh/cta", {
 					{attributes.title}
 				</h2>
 				<RichText.Content tagName="p" value={attributes.body} />
+				<InnerBlocks.Content />
 			</div>
 		);
 	},
