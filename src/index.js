@@ -5,8 +5,8 @@ import {
 	ColorPalette,
 	MediaUpload,
 	InnerBlocks,
-	// 	BlockControls,
-	// 	AlignmentToolbar,
+	BlockControls,
+	AlignmentToolbar,
 } from "@wordpress/block-editor";
 import { RangeControl, PanelBody, Button } from "@wordpress/components";
 
@@ -36,6 +36,10 @@ registerBlockType("csh/cta", {
 			type: "string",
 			source: "html",
 			selector: "p",
+		},
+		alignment: {
+			type: "string",
+			default: "center",
 		},
 		backgroundImage: {
 			type: "string",
@@ -118,6 +122,14 @@ registerBlockType("csh/cta", {
 					</PanelBody>
 				</InspectorControls>
 				<div className="cta-editor">
+					{
+						<BlockControls>
+							<AlignmentToolbar
+								value={attributes.alignment}
+								onChange={setAttrValue("alignment")}
+							/>
+						</BlockControls>
+					}
 					<div
 						className="cta"
 						style={{
@@ -136,7 +148,10 @@ registerBlockType("csh/cta", {
 						></div>
 						<RichText
 							key="editable"
-							style={{ color: attributes.titleColor }}
+							style={{
+								color: attributes.titleColor,
+								textAlign: attributes.alignment,
+							}}
 							tagName="h2"
 							placeholder="Title"
 							value={attributes.title}
@@ -144,6 +159,7 @@ registerBlockType("csh/cta", {
 						/>
 						<RichText
 							key="editable"
+							style={{ textAlign: attributes.alignment }}
 							tagName="p"
 							placeholder="Body"
 							value={attributes.body}
@@ -174,10 +190,19 @@ registerBlockType("csh/cta", {
 						opacity: attributes.overlayOpacity,
 					}}
 				></div>
-				<h2 style={{ color: attributes.titleColor }}>
+				<h2
+					style={{
+						color: attributes.titleColor,
+						textAlign: attributes.alignment,
+					}}
+				>
 					{attributes.title}
 				</h2>
-				<RichText.Content tagName="p" value={attributes.body} />
+				<RichText.Content
+					style={{ textAlign: attributes.alignment }}
+					tagName="p"
+					value={attributes.body}
+				/>
 				<InnerBlocks.Content />
 			</div>
 		);
