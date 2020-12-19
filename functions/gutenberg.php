@@ -51,3 +51,35 @@
 // }
 
 // add_action("init", "csh_gutenberg_blocks");
+
+function csh_gutenberg_blocks()
+{
+    add_theme_support(
+        "editor-color-palette",
+        array(
+            array(
+                "name" => "White",
+                "slug" => "white",
+                "color" => "#ffffff"
+            ),
+            array(
+                "name" => "Red",
+                "slug" => "red",
+                "color" => "#d30050"
+            )
+        )
+    );
+
+    add_theme_support(
+        "editor-font-sizes",
+        array(
+            array(
+                "name" => "CSH Size",
+                "slug" => "csh-size",
+                "size" => 16
+            )
+        )
+    );
+}
+
+add_action("init", "csh_gutenberg_blocks");
