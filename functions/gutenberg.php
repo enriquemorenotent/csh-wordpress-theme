@@ -4,18 +4,23 @@ function csh_gutenber_default_colors()
 {
     add_theme_support(
         "editor-color-palette",
-        array(
-            array(
+        [
+            [
                 "name" => "White",
                 "slug" => "white",
                 "color" => "#ffffff"
-            ),
-            array(
+            ],
+            [
+                "name" => "Black",
+                "slug" => "black",
+                "color" => "#000000"
+            ],
+            [
                 "name" => "Red",
                 "slug" => "red",
                 "color" => "#d30050"
-            )
-        )
+            ]
+        ]
     );
 
     add_theme_support(
