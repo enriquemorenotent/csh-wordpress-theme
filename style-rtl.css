@@ -198,14 +198,19 @@ table thead {
 	box-shadow: 0 0 3px #ddd;
 }
 
-.cta-overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-}
-
 .cta {
 	position: relative;
+	padding: 10px 20px;
+}
+
+.cta .overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.cta * {
+	position: relative;
+	z-index: 1;
+	text-align: center;
 }

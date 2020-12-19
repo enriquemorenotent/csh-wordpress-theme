@@ -1,11 +1,15 @@
 .cta {
 	position: relative;
+	padding: 10px 20px;
 
-	.cta-overlay {
+	.overlay {
 		position: absolute;
-		top: 0px;
-		bottom: 0px;
-		left: 0px;
-		right: 0px;
+		inset: 0px;
+	}
+
+	* {
+		position: relative;
+		z-index: 1;
+		text-align: center;
 	}
 }

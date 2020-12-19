@@ -62,7 +62,7 @@ registerBlockType("csh/cta", {
 		const handleChangeTitleColor = setAttrValue("titleColor");
 		const handleSelectBackgroundImage = (image) =>
 			setAttributes({ backgroundImage: image.sizes.full.url });
-		const handleSelectOverlayColor = setAttrValue("overlayColor");
+		const handleChangeOverlayColor = setAttrValue("overlayColor");
 		const handleChangeOverlayOpacity = setAttrValue("overlayOpacity");
 
 		return (
@@ -104,7 +104,7 @@ registerBlockType("csh/cta", {
 							</p>
 							<ColorPalette
 								value={attributes.overlayColor}
-								onSelect={handleSelectOverlayColor}
+								onChange={handleChangeOverlayColor}
 							/>
 							<RangeControl
 								label="Overlay opacity"
@@ -127,6 +127,13 @@ registerBlockType("csh/cta", {
 							backgroundRepeat: "no-repeat",
 						}}
 					>
+						<div
+							className="overlay"
+							style={{
+								backgroundColor: attributes.overlayColor,
+								opacity: attributes.overlayOpacity,
+							}}
+						></div>
 						<RichText
 							key="editable"
 							style={{ color: attributes.titleColor }}
@@ -159,6 +166,13 @@ registerBlockType("csh/cta", {
 					backgroundRepeat: "no-repeat",
 				}}
 			>
+				<div
+					className="overlay"
+					style={{
+						backgroundColor: attributes.overlayColor,
+						opacity: attributes.overlayOpacity,
+					}}
+				></div>
 				<h2 style={{ color: attributes.titleColor }}>
 					{attributes.title}
 				</h2>
