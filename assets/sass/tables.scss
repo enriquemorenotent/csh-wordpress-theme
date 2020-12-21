@@ -1,0 +1,23 @@
+.wp-block-table {
+	overflow: visible;
+
+	table {
+		box-shadow: 0 0 3px #ccc;
+
+		td {
+			padding: 20px 20px 20px 20px;
+			vertical-align: top;
+		}
+
+		td:nth-child(2) {
+			color: #d30050;
+			// font-weight: bold;
+			width: 200px;
+			text-align: right;
+		}
+
+		tr:nth-child(odd) {
+			background-color: #f8f8f8;
+		}
+	}
+}

@@ -5,6 +5,9 @@ function set_theme_support()
     // Editor styles
     add_theme_support( 'editor-styles' );
 
+    // Wide block
+    add_theme_support( 'align-wide' );
+
     // Tab title shows the post name
     add_theme_support( 'title-tag' );
 

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
 /* Add styles for typography here */
 
 h1 {
@@ -8,12 +10,20 @@ h1 {
 
 h2 {
 	font-family: "Libre Baskerville", serif;
-	font-size: 28px;
+	font-size: 30px;
+	font-weight: 600;
+	margin: 30px auto;
+}
+
+h3 {
+	font-family: "Libre Baskerville", serif;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 h4 {
 	font-family: "Libre Baskerville", serif;
-	font-size: 22px;
+	font-size: 16px;
 }
 
 p,
@@ -21,11 +31,13 @@ ul {
 	font-family: Lato, serif;
 	font-size: 16px;
 	line-height: 1.5;
+	margin: 20px auto;
 }
 
 a,
 a:active,
-a:focus {
+a:focus,
+a:hover {
 	color: #d30050;
 }
 

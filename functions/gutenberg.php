@@ -6,6 +6,31 @@ function csh_gutenber_default_colors()
         "editor-color-palette",
         [
             [
+                "name" => "Default",
+                "slug" => "default",
+                "color" => "#cda34d"
+            ],
+            [
+                "name" => "Primary",
+                "slug" => "primary",
+                "color" => "#d30050"
+            ],
+            [
+                "name" => "Heading",
+                "slug" => "heading",
+                "color" => "#2f2e2c"
+            ],
+            [
+                "name" => "Base",
+                "slug" => "base",
+                "color" => "#686663"
+            ],
+            [
+                "name" => "Bg color",
+                "slug" => "bg_color",
+                "color" => "#f6f3ec"
+            ],
+            [
                 "name" => "White",
                 "slug" => "white",
                 "color" => "#ffffff"
@@ -20,12 +45,6 @@ function csh_gutenber_default_colors()
                 "slug" => "red",
                 "color" => "#d30050"
             ],
-            [
-                "name" => "Foo",
-                "slug" => "foo",
-                "color" => "#262582"
-            ],
-
         ]
     );
 
@@ -33,47 +52,12 @@ function csh_gutenber_default_colors()
         "editor-font-sizes",
         array(
             array(
-                "name" => "Normal",
-                "slug" => "normal",
-                "size" => 16,
+                "name" => "Hero",
+                "slug" => "hero",
+                "size" => 36,
             )
         )
     );
 }
 
 add_action("init", "csh_gutenber_default_colors");
-
-function csh_gutenberg_blocks()
-{
-    wp_register_script(
-        "csh-blocks-js",
-        get_template_directory_uri() . "/build/index.js",
-        array(
-            'wp-editor',
-            'wp-blocks',
-            'wp-components',
-            // 'wp-element',
-        ),
-    );
-
-    wp_register_style(
-        "csh-blocks-css",
-        get_template_directory_uri() . "/blocks.css",
-        []
-    );
-
-    wp_register_style(
-        "csh-blocks-editor-css",
-        get_template_directory_uri() . "/blocks-editor.css",
-        []
-    );
-
-    register_block_type("csh/cta", array(
-        "editor_script" => "csh-blocks-js",
-        "editor_style" => "csh-blocks-editor-css",
-        "style" => "csh-blocks-css"
-    ));
-}
-
-add_action("init", "csh_gutenberg_blocks");
-
