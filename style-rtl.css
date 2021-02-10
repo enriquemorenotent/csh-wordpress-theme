@@ -94,6 +94,20 @@ footer a {
 	color: #9d9a93;
 }
 
+footer .far,
+footer .fas {
+	color: #d30050;
+	font-size: 30px;
+	display: inline-block;
+	margin-left: 20px;
+	position: relative;
+	top: 6px;
+}
+
+footer ul.contact li {
+	margin: 30px 0;
+}
+
 main > * {
 	width: 1240px;
 	margin: 0 auto;
