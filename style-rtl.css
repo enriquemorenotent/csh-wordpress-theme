@@ -64,6 +64,13 @@ header .menu a:hover {
 	background-color: #c30040;
 }
 
+@media only screen and (max-width: 600px) {
+
+	header .menu li {
+		display: block;
+	}
+}
+
 footer {
 	background-color: #201f1d;
 	padding: 40px 0;
@@ -108,6 +115,13 @@ footer ul.contact li {
 	margin: 30px 0;
 }
 
+@media only screen and (max-width: 600px) {
+
+	footer h4 {
+		margin: 20px 0;
+	}
+}
+
 main > * {
 	width: 1240px;
 	margin: 0 auto;
@@ -116,6 +130,18 @@ main > * {
 main > .alignfull {
 	width: 100%;
 	margin: 0 auto;
+}
+
+.wp-block-columns.sm-gap-20 > .wp-block-column {
+	margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	main > * {
+		width: 100%;
+		padding: 0 1.5rem;
+	}
 }
 
 .wp-block-table {

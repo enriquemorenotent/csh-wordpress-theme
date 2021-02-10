@@ -7,3 +7,14 @@ main > .alignfull {
 	width: 100%;
 	margin: 0 auto;
 }
+
+.wp-block-columns.sm-gap-20 > .wp-block-column {
+	margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+	main > * {
+		width: 100%;
+		padding: 0 1.5rem;
+	}
+}
