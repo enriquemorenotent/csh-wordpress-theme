@@ -6,6 +6,10 @@ h1 {
 	font-family: "Libre Baskerville", serif;
 	font-size: 36px;
 	font-weight: 700;
+
+	&.hero {
+		margin-bottom: 0;
+	}
 }
 
 h2 {
@@ -31,7 +35,7 @@ ul {
 	font-family: Lato, serif;
 	font-size: 16px;
 	line-height: 1.5;
-	margin: 20px auto;
+	margin: 0px auto 20px;
 }
 
 a,
@@ -74,4 +78,8 @@ table {
 table thead {
 	background-color: #f8f8f8;
 	color: #6d6d6d;
+}
+
+.wp-block-image img {
+	height: auto;
 }

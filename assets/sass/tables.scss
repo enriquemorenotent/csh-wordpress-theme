@@ -21,3 +21,32 @@
 		}
 	}
 }
+
+ul.navigation {
+	position: sticky;
+	top: 30px;
+	background: #d30050;
+	padding: 20px;
+	list-style: none;
+
+	a {
+		border: 1px solid #e04a83;
+		border-bottom-width: 0;
+		display: block;
+		padding: 30px;
+		color: #f0c5d5;
+		font-weight: bold;
+		text-transform: uppercase;
+		transition: all 0.2s linear;
+
+		&:hover {
+			text-decoration: none;
+			background-color: #bb0349;
+			color: white;
+		}
+	}
+
+	li:last-child a {
+		border-width: 1px;
+	}
+}
